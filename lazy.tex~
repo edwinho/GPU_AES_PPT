@@ -1,0 +1,733 @@
+% Copyright 2011 by Joseph Pan
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% To compile this file, you may need:
+% 1. LaTeX
+% 2. Beamer
+% 3. CJK
+
+\documentclass{beamer}
+
+% Setup appearance:
+
+\graphicspath{{Images/}}
+
+\mode<presentation>
+{
+  \usetheme{Darmstadt}
+  % or ...
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+% Standard packages
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+
+% CJK packages
+\usepackage{xeCJK}
+\setCJKmainfont{SimHei}
+
+% Setup TikZ
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+% Graphix
+\usepackage{graphicx}
+
+% Author, Title, etc.
+
+\title[lazy story] 
+{一个CSer的偷懒史}
+
+\author[Joseph Pan] % (optional, use only with lots of authors)
+{潘伟洲\inst{1}}
+
+\institute[South China Normal University(SCNU)] % (optional, but mostly needed)
+{
+  \inst{1}%
+  School of Computer\\
+  South China Normal University
+  %\and
+  %Whatever
+  }
+
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[WABI 2011]
+{4/11, 2011}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+	  \begin{frame}<beamer>{Outline}
+	      \tableofcontents[currentsection,currentsubsection]
+		    \end{frame}
+}
+
+
+% The main document
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Mind Map}
+  \begin{figure}
+    \raggedright
+    \includegraphics[width=11cm]{mindmap.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\section{从Linux开始}
+
+\subsection{美丽的Ubuntu}
+
+\begin{frame}{邂逅Ubuntu}
+	我的故事，从认识她开始...
+    \begin{columns}[t]
+    \column{.5\textwidth}
+	\centering
+    	\includegraphics[width=6cm]{linux.jpg}
+    \column{.5\textwidth}
+    	\centering
+	\includegraphics[width=5cm]{ubuntu_logo.jpg}
+    \end{columns}
+\end{frame}
+   
+\begin{frame}{splash}
+    \centering
+    \includegraphics[width=10cm]{splash.jpg}
+\end{frame}
+
+\begin{frame}{震颤窗口}
+    \centering
+    \includegraphics[width=10cm]{screen.png}
+\end{frame}
+
+\begin{frame}{3D桌面}
+    \centering
+    \includegraphics[width=10cm]{3d.png}
+\end{frame}
+
+\subsection{我和Ubuntu的罗曼史}
+\begin{frame}{Ubuntu，我的最爱}
+	``Oh Ubuntu, you are my favorite Linux-based
+	operating system.'' 
+	\begin{flushright}
+	Sheldon, S03E22, \textsl{the BigBang Theory}\\%
+   	\includegraphics[width=6cm]{sheldon.jpg}
+	\end{flushright}
+\end{frame}
+
+
+\begin{frame}{第一次约会}
+	她毁了我的整块硬盘！
+	\begin{center}
+	\includegraphics[width=9cm]{entiredisk.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{第一次约会}
+	她带给我无穷的快乐！
+	\begin{itemize}
+    \item Compiz
+		\begin{center}
+		\includegraphics[width=8cm]{compiz.png}
+		\end{center}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{第一次约会}
+    她带给我无穷的快乐！
+	\begin{itemize}
+	\item Ubuntu Wiki \& Forum
+		\begin{center}
+		\includegraphics[width=8cm]{ubuntuwiki.png}
+		\end{center}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{第一次约会}
+    她带给我无穷的快乐！
+	\begin{itemize}
+	\item Ubuntu Software Center
+		\begin{center}
+		\includegraphics[width=8cm]{softwares.png}
+		\end{center}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{开源的力量}
+    \begin{columns}[t]
+    \column{.3\textwidth}
+		\begin{block}{GNU}
+			\centering
+    		\includegraphics[width=3cm]{GNU.jpg}
+		\end{block}
+    \column{.3\textwidth}
+		\begin{block}{Richard Stallman}
+    	\centering
+		\includegraphics[width=3cm]{stallman.jpg}
+		\end{block}
+    \column{.3\textwidth}
+		\begin{block}{Linus Torvalds}
+    	\centering
+		\includegraphics[width=3cm]{Torvalds.jpg}
+		\end{block}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{第二次约会}
+	头痛的Grub修复
+	\begin{center}	
+		\includegraphics[width=10cm]{grub.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{尝试摆脱Windows}
+	\begin{itemize}
+		\item QQ --- Linux QQ、Wine QQ、Web QQ、Pidgin
+		\item Office --- OpenOffice、RedOffice、永中Office、%
+			LibreOffice、ZohoOffice、Google Office、\alert{WPS 2012}
+		\item Photoshop --- GIMP
+		\item 其他各种Linux替代软件
+		\item shell、make、makefile、Sourceforge、Google Code、PPA、
+			SVN、debian、gtk$+$、GNome、Forum、\ldots
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{第n次约会}
+	\begin{itemize}
+		\item 版本升级
+		\item 光盘安装
+		\item 硬盘安装 Wubi安装
+		\item U盘安装
+		\item \alert{为什么我要重复敲那么多条装机指令？}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Shell让我装机无忧}
+	\begin{center}	
+		\includegraphics[width=10cm]{shell.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{开源的力量}
+	Opensource became my belief.
+	
+
+	开源成了我的信仰。
+    \begin{flushright}
+    	\includegraphics[width=8cm]{stallman2.png}
+    \end{flushright}
+\end{frame}
+
+\section{无``懒''不成魔}
+
+\begin{frame}{无``懒''不成魔}
+	从此我走上了偷懒的道路
+	\begin{flushright}	
+		\includegraphics[width=6cm]{run.png}
+	\end{flushright}
+\end{frame}
+
+\subsection{浏览器篇}
+
+\begin{frame}{Chrome，我的最爱}
+	\begin{itemize}
+		\item 超快\&稳定
+		\item 强大的扩展和应用
+		\item 自动同步
+	\end{itemize}
+    \begin{columns}[t]
+    \column{.5\textwidth}
+	\centering
+    	\includegraphics[width=4cm]{chrome.jpg}
+    \column{.5\textwidth}
+    	\centering
+	\includegraphics[width=5cm]{chromepower.png}
+    \end{columns}
+\end{frame}
+
+
+\begin{frame}{Chrome的启示}
+    \begin{columns}[t]
+    \column{.7\textwidth}
+
+	\begin{itemize}
+		\item Web2.0 --- 让信息自己跑上门
+			\begin{itemize}
+			\item Feed
+			\item 邮箱
+			\item 微博
+			\item \ldots
+			\end{itemize}
+		\item 未来 --- 云、Web OS、3D网页引擎
+	\end{itemize}
+
+    \column{.3\textwidth}
+		\begin{center}
+		\includegraphics[width=3cm]{cloud2.png}
+		\end{center}
+    \end{columns}
+	\begin{center}	
+		\includegraphics[height=3cm]{cloud.png}
+	\end{center}
+\end{frame}
+
+\subsection{笔记篇}
+
+\begin{frame}{Google Notebook}
+	\begin{itemize}
+		\item 云笔记
+		\item 与谷歌帐号绑定
+		\item 简单易用
+		\item 不稳定:(
+	\end{itemize}
+	\begin{center}	
+		\includegraphics[width=9cm]{googlenote.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Evernote，我的最爱}
+	\begin{center}	
+		\includegraphics[width=8cm]{evernote.jpg}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Evernote，我的最爱}
+	Evernote可以做什么？
+	\begin{center}	
+		\includegraphics[width=10cm]{evernote.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{Evernote的启示}
+	\begin{itemize}
+		\item 支持的样式有限（公式、代码、多媒体、附件、HTML语法）
+		\item 把你的录音、笔迹放上云端
+	      \begin{itemize}
+	        \item LiveScribe
+	        \item GPen2000
+	      \end{itemize}
+	    \item 文字识别、公式识别、图像识别		
+	\end{itemize}
+	\begin{flushright}	
+		\includegraphics[width=5cm]{pen.png}
+	\end{flushright}
+\end{frame}
+
+\begin{frame}{MindMap／心智图／思维导图}
+    \begin{columns}[t]
+    \column{.6\textwidth}
+
+	\begin{itemize}
+		\item 什么是心智图？
+	      \begin{itemize}
+	        \item 我们的大脑\alert{偏爱图形}
+	        \item 心智图就是用来将我们的发射性思维\alert{图形化}%
+				表达出来的工具
+	      \end{itemize}
+	    \item 心智图的作用		
+	      \begin{itemize}
+	        \item 集中精力于真正的问题；
+	        \item 重要的关键词更为显眼；
+			\item 培养清晰的思路;
+			\item 联想、创造;
+			\item \ldots
+	      \end{itemize}
+		\item 比较流行的心智图软件
+	      \begin{itemize}
+	        \item MindProject
+	        \item FreeMind
+			\item \alert{XMind}
+			\item \alert{Mind42}
+	      \end{itemize}
+	\end{itemize}
+
+    \column{.4\textwidth}
+	\begin{flushright}	
+		\includegraphics[width=4cm]{handmm.png}
+	\end{flushright}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{MindMap例子}
+	\begin{itemize}
+		\item 演讲
+	\end{itemize}
+	\begin{center}	
+		\includegraphics[width=9cm]{mindmap2.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{MindMap例子}
+	\begin{itemize}
+		\item 做笔记
+	\end{itemize}
+	\begin{center}	
+		\includegraphics[width=11cm]{ANN.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{MindMap例子}
+	\begin{itemize}
+		\item 做笔记
+	\end{itemize}
+	\begin{center}	
+		\includegraphics[width=8cm]{note.jpg}
+	\end{center}
+\end{frame}
+
+\begin{frame}{MindMap例子}
+	\begin{itemize}
+		\item 团队交流
+	\end{itemize}
+	\begin{center}	
+		\includegraphics[width=11cm]{FaceTracker.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{MindMap常见应用}
+	\begin{itemize}
+		\item 个人：计划，项目管理，沟通，组织，分析解决问题等;
+		\item 学习者：记忆，笔记，写报告，写论文，做演讲，考试，思考，集中注意力等；
+		\item 职业人士：计划，沟通，项目管理，组织，会议，培训，谈判，面试，评估，掀起头脑风暴等。
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{MindMap的启示}
+	\begin{itemize}
+		\item 大部分MindMap产品都无法直接嵌入\alert{公式}
+		\item \alert{Evernote + MindMap？}
+		\item 根据MindMap\alert{自动生成}文档
+		\item 根据文档\alert{自动生成}MindMap
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{更深入的学习}
+    \begin{itemize}
+    \item Evernote、Mindmap可以扩充自己的知识面
+			\begin{center}
+				\includegraphics[width=6cm]{line.eps}
+			\end{center}
+	\item 如何对自己的笔记进行有效的复习和回顾？
+			\begin{center}
+				\includegraphics[width=6cm]{line2.eps}
+			\end{center}
+    \item Blogging
+    		\begin{itemize}
+				\item 推荐：阮一峰、pluskid、liyanrui
+			\end{itemize}
+	\item Wiki
+			\begin{itemize}
+				\item 推荐：王垠、李果正、pluskid
+    		\end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{无所不能的 \LaTeX}
+    \begin{columns}[t]
+    \column{.6\textwidth}
+
+	\begin{itemize}
+		\item \LaTeX 是什么？
+	      \begin{itemize}
+	        \item \TeX --- 大师Knuth的又一旷世杰作
+	        \item 公认的数学公式排得最好的系统		
+	      \end{itemize}
+		\item 使用它的原因
+	      \begin{itemize}
+	        \item 王立斌老师的力荐
+			\item 陈寅老师的身体力行
+	        \item 毕业论文的教训		
+			\item Linux下的Office文档表现实在太丑陋
+	      \end{itemize}
+	\end{itemize}
+    \column{.4\textwidth}
+	\begin{flushright}	
+		\includegraphics[width=4cm]{Knuth.jpg}
+	\end{flushright}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{\LaTeX 的强大之处}
+	\begin{itemize}
+		\item 传统：WYSIWYG(\alert{W}hat \alert{Y}ou \alert{S}ee \alert{I}s \alert{W}hat \alert{Y}ou \alert{G}et）
+	    \item \LaTeX: WYTIWYG(\alert{W}hat \alert{Y}ou \alert{T}hink \alert{I}s \alert{W}hat \alert{Y}ou \alert{G}et)
+	\end{itemize}
+	\begin{center}	
+		\includegraphics[width=9cm]{thispage.png}
+	\end{center}
+\end{frame}
+
+\begin{frame}{\LaTeX 的强大之处}
+	\begin{itemize}
+	    \item 轻松处理各种复杂的排版，例如:
+	 		\begin{itemize}
+	    	\item 公式、各种罕见的符号
+			\begin{center}
+				\includegraphics[width=6cm]{complexformula.png}
+			\end{center}
+			\item 歌谱
+				\begin{center}	
+				\includegraphics[width=5cm]{music.png}
+				\end{center}
+			\item 幻灯片、网页
+			\item CLI绘制图形
+			\end{itemize}	
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{CLI绘图工具的魅力}
+    CLI绘图实例：
+    \begin{columns}[t]
+
+    \column{.5\textwidth}
+    \begin{exampleblock}{精确控制的函数图}
+            \begin{center}
+                \includegraphics[width=4cm]{2d.png}
+            \end{center}
+    \end{exampleblock}
+
+    \column{.5\textwidth}
+    \begin{exampleblock}{流程图}
+            \begin{center}
+                \includegraphics[width=4cm]{flow.pdf}
+            \end{center}
+    \end{exampleblock}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{CLI绘图工具的魅力}
+    CLI绘图实例：
+    \begin{columns}[t]
+
+    \column{.5\textwidth}
+    \begin{exampleblock}{八卦图}
+            \begin{center}
+                \includegraphics[width=4cm]{bagua.pdf}
+            \end{center}
+    \end{exampleblock}
+
+    \column{.5\textwidth}
+    \begin{exampleblock}{装饰图案}
+            \begin{center}
+                \includegraphics[width=4cm]{decorate.png}
+            \end{center}
+    \end{exampleblock}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{CLI绘图工具的魅力}
+    CLI绘图实例：
+
+    \begin{exampleblock}{Real 3D图形}
+            \begin{center}
+                \includegraphics[width=8cm]{soccer.jpg}
+            \end{center}
+    \end{exampleblock}
+
+\end{frame}
+
+
+\begin{frame}{\LaTeX 的启示(1)}
+	\alert{为什么华师没有自己的毕业论文\LaTeX 模板?}
+    \begin{itemize}
+	\item 国内拥有自己的论文模板的高校（未完全统计）：
+
+
+	清华大学、北京大学、浙江大学、北京航空大学、上海交通大学、%
+	北京师范大学、\alert{中山大学}、\alert{华南理工大学}、中科%
+	院、苏州大学、重庆大学、哈尔滨工业大学、南京理工大学、西安%
+	电子科技大学、	北京邮电大学、国防科学技术大学、大连理工大%
+	学、台湾科技大学、南京大学、武汉理工大学、西北工业大学、燕%
+	山大学、中国农业大学、青岛理工大学理学院、同济大学、中国科%
+	学技术大学、中国地质大学、东北师范大学、东北大学、河海大学、%
+	南开大学、西安交通大学、东南大学、厦门大学、澳门科技大学, etc.
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{\LaTeX 的启示(2)}
+	\alert{Evernote+MindMap+\LaTeX?}
+	\begin{itemize}
+	\item tikz画的心智图
+			\begin{center}
+				\includegraphics[width=6cm]{mindmap3.pdf}
+			\end{center}
+	\item Yanrui Li:《开始全面接触 GTK$+$》
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{\LaTeX 的启示(3)}
+	\alert{WYTIWYG}，为了更好地\alert{偷懒}，不要依赖GUI！
+	\begin{itemize}
+	\item 鼠标+键盘太\alert{低效}！
+	\item GUI元素\alert{难}以确定焦点！
+	\item 几十次鼠标的点击=一条简单的指令，\alert{不值}！
+	\item 我的\alert{审美}发生了改变
+    \end{itemize}
+\end{frame}
+
+\subsection{IDE篇}
+
+\begin{frame}{你们用什么IDE？}
+	大部分同学的习惯：
+	\begin{itemize}
+	\item C++ --- VC6.0/Visual Studio/Dev C++\ldots
+	\item Java --- Eclipse/JBuilder\ldots
+	\item \ldots
+	\end{itemize}
+	少部分同学的习惯：
+	\begin{itemize}
+	\item Editplus/UltraEdit\ldots
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{介绍两位好朋友}
+	\begin{columns}[t]
+
+    \column{.5\textwidth}
+	\begin{block}{Vim}
+			\begin{center}
+				\includegraphics[width=4cm]{vim.png}
+			\end{center}
+	\end{block}
+
+    \column{.5\textwidth}
+	\begin{block}{Emacs(\alert{E}diting \alert{MAC}ro\alert{S})}
+			\begin{center}
+				\includegraphics[width=4cm]{emacs.png}
+			\end{center}
+	\end{block}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{IDE之神 --- Vim}
+	\begin{itemize}
+		\item Vim的特点
+			\begin{itemize}
+				\item 我\alert{不需要}用到鼠标（多个工作模式）
+				\item 高\alert{可扩展}---.vimrc
+				\item 体积\alert{小巧}、运行\alert{快速}
+			\end{itemize}
+		\item 学习曲线：\alert{陡峭}
+		\item 我用它来：编辑普通文本、编辑简单的程序、编写\LaTeX、查词典
+	\end{itemize}
+			\begin{center}
+				\includegraphics[width=6cm]{vimdict.png}
+			\end{center}
+\end{frame}
+
+\begin{frame}{神的IDE --- Emacs}
+	\begin{itemize}
+		\item Emacs的特点
+			\begin{itemize}
+				\item 我\alert{不需要}用到鼠标（包罗万象的快捷键）
+				\item 高\alert{可扩展}---Lisp语言
+				\item 几乎可以当成一个\alert{操作系统}
+			\end{itemize}
+		\item 学习曲线：\alert{平稳上升}
+		\item 我用它来：编辑普通文本、维护大型的工程、文件管理、%
+		听音乐、查词典、玩游戏、上QQ、发Evernote
+		\item 它还可以：收发邮件、浏览网页、新闻组、记录日程、%
+		约会提醒、煮咖啡、\ldots
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Emacs应用截图}
+	用Emacs听\alert{音乐}
+	\centering
+		\includegraphics[width=10cm]{emacsmusic.png}
+\end{frame}
+
+\begin{frame}{Emacs应用截图}
+	用Emacs玩\alert{游戏}
+	\centering
+		\includegraphics[width=10cm]{emacsgame.png}
+\end{frame}
+
+\begin{frame}{Emacs应用截图}
+	用Emacs\alert{管理文件}
+	\centering
+		\includegraphics[width=10cm]{emacsdired.png}
+\end{frame}
+
+\subsection{小结}
+
+\begin{frame}{小结}
+
+	\begin{itemize}
+	\item 因为热爱\alert{偷懒}，我接触到了很多很\alert{新鲜}很\alert{酷}的东西
+	\item 因为热爱\alert{偷懒}，我的学习\alert{速率}大增
+	\item 因为热爱\alert{偷懒}，我越来越追求\alert{极致}
+	\item 因为热爱\alert{偷懒}，我的\alert{审美}观也发生了很大改变
+	\item 不过，以上所说的只是\alert{工具}
+    \end{itemize}
+\end{frame}
+
+\section{后话}
+
+\begin{frame}{给师弟师妹们的科研建议}
+
+	\begin{columns}[t]
+
+    \column{.5\textwidth}
+
+	\begin{itemize}
+	\item 学会\alert{偷懒}
+	\item 从\alert{兴趣}出发
+		\begin{itemize}
+			\item \alert{不要为了科研而科研}
+			\item 培养至少一种\alert{专业以外的兴趣}
+		\end{itemize}
+	\item Derek Sivers: "Stay locked in the shed."
+	\item 不要忘了你的\alert{朋友}
+	\item \alert{尊重}他人的研究成果，\alert{积极交流}
+    \end{itemize}
+
+    \column{.5\textwidth}
+			\begin{center}
+				\begin{block}{Derek Sivers}
+				\includegraphics[width=4cm]{derek.jpg}
+				\end{block}
+			\end{center}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Contact Me}
+	\begin{itemize}
+		\item 你可以在这里\alert{下载}到我的课件和源代码
+
+		www.josephpan.net/share/2011/lazy.pdf
+
+		www.josephpan.net/share/2011/lazy.tar.gz
+		\end{itemize}	
+	\begin{center}
+		\includegraphics[width=5cm]{contact.png}
+	\end{center}
+\end{frame}
+
+\end{document}
+

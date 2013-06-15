@@ -1,0 +1,18 @@
+\beamer@endinputifotherversion {3.20pt}
+\select@language {english}
+\beamer@sectionintoc {1}{从OpenCL开始}{4}{0}{1}
+\beamer@subsectionintoc {1}{1}{什么是OpenCL}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{为什么选择OpenCL}{7}{0}{1}
+\beamer@sectionintoc {2}{进度}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{组建AMD流计算环境}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{基于GPU上加解密}{11}{0}{2}
+\beamer@subsectionintoc {2}{3}{不同平台之间比较}{12}{0}{2}
+\beamer@sectionintoc {3}{AES优化}{14}{0}{3}
+\beamer@subsectionintoc {3}{1}{从最优算法开始}{14}{0}{3}
+\beamer@subsectionintoc {3}{2}{OpenCL矢量}{15}{0}{3}
+\beamer@subsectionintoc {3}{3}{内存访问的优化}{16}{0}{3}
+\beamer@subsectionintoc {3}{4}{No Functions}{18}{0}{3}
+\beamer@subsectionintoc {3}{5}{Precomputation}{19}{0}{3}
+\beamer@sectionintoc {4}{后续}{20}{0}{4}
+\beamer@subsectionintoc {4}{1}{后续工作}{20}{0}{4}
+\beamer@sectionintoc {5}{End}{24}{0}{5}
